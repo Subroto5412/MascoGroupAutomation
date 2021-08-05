@@ -43,17 +43,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
 
     override fun login() {
 
-        val userId = mActivityLoginBinding!!.activityLoginIdTiet.text!!.toString()
-        val password = mActivityLoginBinding!!.activityLoginPasswordTiet.text!!.toString()
 
-        if (viewModel.isUserIdAndPasswordValid(userId, password)) {
-       //     hideKeyboard()
-            //viewModel.login(userId, password, this)
-          //  showMessage(getString(R.string.invalid_email_password), AppUtils.MessageType.ERROR)
-        } else {
-            //Toast.makeText(this, getString(R.string.invalid_email_password), Toast.LENGTH_SHORT).show();
-         //   showMessage(getString(R.string.invalid_email_password), AppUtils.MessageType.ERROR)
-        }
+
     }
 
 
@@ -61,14 +52,15 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
         super.onCreate(savedInstanceState)
         mActivityLoginBinding = viewDataBinding
         viewModel.navigator = this
-        setup()
+//        setup()
     }
+/*
 
     fun setup() {
 
         mActivityLoginBinding!!.activityLoginIdTiet.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                mActivityLoginBinding!!.activityLoginMainActv.isEnabled =
+                mActivityLoginBinding!!.activityLoginMainActv1.isEnabled =
                         viewModel.isUserIdAndPasswordValid(
                                 mActivityLoginBinding!!.activityLoginIdTiet.text!!.toString(),
                                 mActivityLoginBinding!!.activityLoginPasswordTiet.text!!.toString()
@@ -86,7 +78,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
         mActivityLoginBinding!!.activityLoginPasswordTiet.addTextChangedListener(object :
                 TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                mActivityLoginBinding!!.activityLoginMainActv.isEnabled =
+                mActivityLoginBinding!!.activityLoginMainActv1.isEnabled =
                         viewModel.isUserIdAndPasswordValid(
                                 mActivityLoginBinding!!.activityLoginIdTiet.text!!.toString(),
                                 mActivityLoginBinding!!.activityLoginPasswordTiet.text!!.toString()
@@ -102,6 +94,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
             }
         })
     }
+*/
 
     override fun openOrderListActivity() {
     /*    val intent = OrderListActivity.newIntent(this@LoginActivity)

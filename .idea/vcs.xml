@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/MascoBazarECommerceApp(5.1.2021)" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MascoBazarECommerceApp(main_back)" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MascoBazarEcommerceProject" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MascoBazarEcommerceProject - Copy" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MascoBazarEcommerceProject(Address-11-2-2021)/MascoBazarEcommerceProject" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MoscoBazarProductDeliveryApp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MoscoBazarProductDeliveryApp-2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

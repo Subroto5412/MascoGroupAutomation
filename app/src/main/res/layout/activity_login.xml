@@ -16,267 +16,208 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/activity_login_parent_cl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/app_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DELIVERY APP"
-            android:gravity="center_horizontal"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="@dimen/_50sdp"
-            android:textSize="22sp"
-            android:fontFamily="@font/montserrat_semi_bold"
-            android:textColor="@color/white">
-        </androidx.appcompat.widget.AppCompatTextView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_login_top_cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_324sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/activity_login_down_cl">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/app_name"
-            android:gravity="center_horizontal"
+            android:id="@+id/activity_login_logo_im"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/logo_login"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
-
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/activity_login_id_tiet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:gravity="center_vertical"
-                android:paddingLeft="@dimen/_10sdp"
-                android:fontFamily="@font/montserrat_regular"
-                android:inputType="text"
-                android:hint="login_hint"
-                android:text="01383637292"
-                android:layout_marginStart="@dimen/_35sdp"
-                android:layout_marginEnd="@dimen/_35sdp"
-                android:textSize="@dimen/_12sdp"
-                app:layout_constraintTop_toBottomOf="@+id/logo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-               />
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/activity_login_password_tiet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:cursorVisible="true"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="center_vertical"
-            android:paddingLeft="@dimen/_10sdp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="123456"
-            android:layout_marginStart="@dimen/_35sdp"
-            android:layout_marginEnd="@dimen/_35sdp"
-            android:inputType="textPassword"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_id_tiet"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
-<!--        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/activity_login_id_til"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:background="@drawable/bg_input"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textColorHint="@color/semi_dark"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_login_id_tiet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="01971765959"
-                android:gravity="center_vertical"
-                android:inputType="text"
-                android:textColor="@color/semi_dark"
-                android:textSize="@dimen/_12sdp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>-->
-
-       <!-- <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/activity_login_password_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:background="@drawable/bg_input"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginRight="20dp"
-            android:textColorHint="@color/semi_dark"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_id_tiet"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_login_password_tiet"
-                android:background="@drawable/bg_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:fontFamily="@font/montserrat_regular"
-                android:hint="@string/password_hint"
-                android:inputType="textPassword"
-                android:textColor="@color/semi_dark"
-                android:textSize="@dimen/_12sdp" />
-        </com.google.android.material.textfield.TextInputLayout>-->
-
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/activity_login_main_actv"
-            android:layout_width="match_parent"
+            android:id="@+id/activity_user_id_tv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_35sdp"
-            android:layout_marginEnd="@dimen/_35sdp"
-            android:fontFamily="@font/montserrat_medium"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:onClick="@{()->viewModel.onServerLoginClick()}"
-            android:paddingTop="@dimen/_12sdp"
-            android:paddingBottom="@dimen/_11sdp"
-            android:text="Login"
-            android:background="@color/black"
+            android:text="User ID"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_login_logo_im"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_password_tiet" />
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-<!--
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/activity_login_parent_tb"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/activity_user_id_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/_31sdp"
+            android:inputType="phone"
+            android:hint="Your employee ID"
+            android:textColorHint="@color/text_color_user_id"
+            android:textColor="@color/text_color_user_id"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_71sdp"
+            android:layout_marginEnd="@dimen/_71sdp"
+            android:background="@drawable/input_filed_bg"
+            app:layout_constraintTop_toBottomOf="@+id/activity_user_id_tv"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_password_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_user_id_et"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/activity_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_31sdp"
+            android:inputType="numberPassword"
+            android:hint="Your 4 digit password"
+            android:textColorHint="@color/text_color_user_id"
+            android:textColor="@color/text_color_user_id"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_71sdp"
+            android:layout_marginEnd="@dimen/_71sdp"
+            android:background="@drawable/input_filed_bg"
+            app:layout_constraintTop_toBottomOf="@+id/activity_password_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_forgoy_password_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textColor="@color/text_color_user_id"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_password_et"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_71sdp"
+            />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/rememberCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me"
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginStart="@dimen/_71sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_forgoy_password_tv"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_login_down_cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_240sdp"
+        android:background="@drawable/screen_down"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!--<androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/activity_password_e1t"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_31sdp"
+            android:inputType="numberPassword"
+            android:hint="Your 4 digit password"
+            android:textColorHint="@color/text_color_user_id"
+            android:textColor="@color/text_color_user_id"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_71sdp"
+            android:layout_marginEnd="@dimen/_71sdp"
+            android:background="@drawable/input_filed_bg"
             app:layout_constraintTop_toTopOf="parent"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />-->
 
-            <include
-                android:id="@+id/activity_login_parent_lst"
-                layout="@layout/layout_login_toolbar"
-                app:viewModel="@{viewModel}" />
-
-        </androidx.appcompat.widget.Toolbar>-->
-
-
-
-       <!-- <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/activity_login_id_til"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="@dimen/_32sdp"
-            android:layout_marginRight="20dp"
-            android:textColorHint="@color/semi_dark"
+       <com.google.android.material.card.MaterialCardView
+            android:id="@+id/signInBtnmaterialCardView"
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/text_color_user_id"
+            android:outlineSpotShadowColor="#DADADA"
+            app:cardElevation="24dp"
+            app:cardMaxElevation="40dp"
+           app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_login_id_tiet"
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/signInBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:cursorVisible="true"
-                android:fontFamily="@font/noto_sans_jp_bold"
-                android:text="01971765959"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/semi_dark"
-                android:textSize="@dimen/_12sdp" />
+                android:text="SIGN IN"
+                android:textColor="@color/text_color_35"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
 
-        </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/activity_login_password_til"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="20dp"-->
-<!--            android:layout_marginTop="@dimen/_12sdp"-->
-<!--            android:layout_marginRight="20dp"-->
-<!--            android:textColorHint="@color/semi_dark"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/activity_login_id_til"-->
-<!--            app:passwordToggleEnabled="true">-->
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/activity_login_password_tiet"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:cursorVisible="true"-->
-<!--                android:fontFamily="@font/noto_sans_jp_bold"-->
-<!--                android:hint="@string/password_hint"-->
-<!--                android:inputType="textPassword"-->
-<!--                android:textColor="@color/semi_dark"-->
-<!--                android:textSize="@dimen/_12sdp" />-->
-
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/activity_login_main_actv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@color/cardview_dark_background"
-            android:fontFamily="@font/noto_sans_jp_bold"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:onClick="@{()->viewModel.onServerLoginClick()}"
-            android:paddingTop="@dimen/_12sdp"
-            android:paddingBottom="@dimen/_11sdp"
-            android:text="@string/login"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_password_til" />-->
-
-
-
-       <!-- <View
-            android:id="@+id/activity_login_static_ev"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha=".2"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-             />
-
-        <androidx.core.widget.ContentLoadingProgressBar
-            android:id="@+id/activity_login_parent_clpb"
-            style="?android:attr/progressBarStyleLarge"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_account_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Don't have account?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_64sdp"
+            app:layout_constraintTop_toBottomOf="@+id/signInBtnmaterialCardView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />-->
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_signup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textColor="@color/text_color_user_id"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            app:layout_constraintTop_toBottomOf="@+id/signInBtnmaterialCardView"
+            app:layout_constraintStart_toEndOf="@+id/activity_account_tv"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
