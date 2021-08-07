@@ -10,10 +10,12 @@ import androidx.databinding.library.baseAdapters.BR
 import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivityLoginBinding
 import com.bd.mascogroup.automation.ui.base.BaseActivity
+import com.bd.mascogroup.automation.ui.signup.SignupActivity
 import com.bd.mascogroup.automation.utils.AppUtils
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
+import kotlinx.android.synthetic.main.activity_login.*
 import java.net.URL
 import javax.inject.Inject
 
@@ -52,6 +54,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
         super.onCreate(savedInstanceState)
         mActivityLoginBinding = viewDataBinding
         viewModel.navigator = this
+        activity_login_signup_tv.setOnClickListener {
+            openOrderListActivity()
+        }
 //        setup()
     }
 /*
@@ -97,9 +102,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
 */
 
     override fun openOrderListActivity() {
-    /*    val intent = OrderListActivity.newIntent(this@LoginActivity)
+        val intent = SignupActivity.newIntent(this@LoginActivity)
         startActivity(intent)
-        finish()*/
+//        finish()
     }
 
     override fun androidInjector(): AndroidInjector<Any>? {
