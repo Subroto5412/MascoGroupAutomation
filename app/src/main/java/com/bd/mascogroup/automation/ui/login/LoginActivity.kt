@@ -55,7 +55,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
         mActivityLoginBinding = viewDataBinding
         viewModel.navigator = this
         activity_login_signup_tv.setOnClickListener {
-            openOrderListActivity()
+            openSignupActivity()
         }
 //        setup()
     }
@@ -101,7 +101,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
     }
 */
 
-    override fun openOrderListActivity() {
+     fun openSignupActivity() {
         val intent = SignupActivity.newIntent(this@LoginActivity)
         startActivity(intent)
 //        finish()

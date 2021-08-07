@@ -7,6 +7,8 @@ import androidx.databinding.library.baseAdapters.BR
 import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivitySignupBinding
 import com.bd.mascogroup.automation.ui.base.BaseActivity
+import com.bd.mascogroup.automation.ui.otp.OTPActivity
+import kotlinx.android.synthetic.main.activity_signup.*
 import javax.inject.Inject
 
 class SignupActivity : BaseActivity<ActivitySignupBinding, SignupViewModel>(), ISignupNavigator{
@@ -35,6 +37,17 @@ class SignupActivity : BaseActivity<ActivitySignupBinding, SignupViewModel>(), I
         super.onCreate(savedInstanceState)
         mActivitySignupBinding = viewDataBinding
         viewModel.navigator = this
+
+        signInBtnmaterialCardView.setOnClickListener {
+            openOtpActivity()
+        }
+
+    }
+
+    fun openOtpActivity() {
+        val intent = OTPActivity.newIntent(this@SignupActivity)
+        startActivity(intent)
+//        finish()
     }
 
     companion object {
