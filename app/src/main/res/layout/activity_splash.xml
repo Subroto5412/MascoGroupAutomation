@@ -18,17 +18,64 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/ic_launcher_background">
+        android:background="@color/purple_700">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_launcher_foreground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/_110sdp"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_login_top_cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_195sdp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_login_down_cl"
+        android:background="@color/purple_700">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/logo_splash"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_login_down_cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_368sdp"
+        android:background="@drawable/splash_down_part"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/activity_spalsh_down_logo_im"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_41sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/logo_masco"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_spalsh_down_logo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Believes Sustainable Continuous Development"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_spalsh_down_logo_im" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/activity_spalsh_down_logo_im2"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_92sdp"
+            android:src="@drawable/zooming_logo_part"
+          android:layout_marginBottom="@dimen/_19sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
