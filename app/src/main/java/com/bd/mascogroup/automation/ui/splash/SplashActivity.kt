@@ -4,7 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.animation.AnimationUtils
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.databinding.library.baseAdapters.BR
 import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivitySplashBinding
@@ -78,13 +81,37 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(), I
                 {
                     val animationZoom1 = AnimationUtils.loadAnimation(this, R.anim.zoom)
                     activity_spalsh_down_logo_im2.startAnimation(animationZoom1)
-                }, 1200)
+                    Log.e("---------","------nnn-------")
+                }, 1000)
 
-        viewModel.navigator = this
+       /*  Handler().postDelayed(
+                  {
+                      activity_spalsh_down_logo_im2.isGone = true
+                      activity_spalsh_down_logo_im3.isGone = false
+                  }, 500)
+*/
+
+        Handler().postDelayed(
+                  {
+                      Log.e("---------","------da-------")
+                      val animationZoom2 = AnimationUtils.loadAnimation(this, R.anim.zoom2)
+                      activity_spalsh_down_logo_im2.startAnimation(animationZoom2)
+                  }, 2000)
+
+        Handler().postDelayed(
+                {
+                    Log.e("---------","------da-------")
+                    val animationZoom3 = AnimationUtils.loadAnimation(this, R.anim.zoom3)
+                    activity_spalsh_down_logo_im2.startAnimation(animationZoom3)
+                }, 3000)
+
+
+//        val animationZoom2 = AnimationUtils.loadAnimation(this, R.anim.zoom2)
+//        activity_spalsh_down_logo_im2.startAnimation(animationZoom2)
         Handler().postDelayed({
             viewModel.startSeeding()
             finish()
-        }, 2400)
+        }, 4000)
 
     }
 
@@ -92,7 +119,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(), I
         val intent = LoginActivity.newIntent(this@SplashActivity)
         startActivity(intent)
         finish()
-
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
      /*   val intent = Intent(this, MapsActivity::class.java)
         startActivity(intent)*/
     }
