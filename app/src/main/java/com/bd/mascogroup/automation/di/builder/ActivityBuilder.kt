@@ -1,5 +1,7 @@
 package com.bd.mascogroup.automation.di.builder
 
+import com.bd.mascogroup.automation.ui.home.HomeActivity
+import com.bd.mascogroup.automation.ui.home.HomeActivityModule
 import com.bd.mascogroup.automation.ui.login.LoginActivity
 import com.bd.mascogroup.automation.ui.login.LoginActivityModule
 import com.bd.mascogroup.automation.ui.otp.OTPActivity
@@ -15,7 +17,7 @@ import dagger.android.ContributesAndroidInjector
 
 @Module(
         includes =
-        [SplashActivityModule::class, LoginActivityModule::class, SignupActivityModule::class, OTPActivityModule::class]
+        [SplashActivityModule::class, LoginActivityModule::class, SignupActivityModule::class, OTPActivityModule::class, HomeActivityModule::class]
 )
 
 
@@ -42,13 +44,13 @@ abstract class ActivityBuilder {
   )
   internal abstract fun bindOTPActivity(): OTPActivity
 
-    /*@ContributesAndroidInjector(
-     modules = [OrderSubmitActivityModule::class]
+  @ContributesAndroidInjector(
+     modules = [HomeActivityModule::class]
  )
- internal abstract fun bindOrderSubmitActivity(): OrderSubmitActivity
+ internal abstract fun bindHomeActivity(): HomeActivity
 
- @ContributesAndroidInjector(
-         modules = [ReturnProductActivityModule::class]
- )
- internal abstract fun bindReturnProductActivity(): ReturnProductActivity*/
+    /*@ContributesAndroidInjector(
+          modules = [ReturnProductActivityModule::class]
+  )
+  internal abstract fun bindReturnProductActivity(): ReturnProductActivity*/
 }

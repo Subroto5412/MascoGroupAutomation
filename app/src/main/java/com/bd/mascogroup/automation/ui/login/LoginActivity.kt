@@ -10,6 +10,7 @@ import androidx.databinding.library.baseAdapters.BR
 import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivityLoginBinding
 import com.bd.mascogroup.automation.ui.base.BaseActivity
+import com.bd.mascogroup.automation.ui.home.HomeActivity
 import com.bd.mascogroup.automation.ui.signup.SignupActivity
 import com.bd.mascogroup.automation.utils.AppUtils
 import dagger.android.AndroidInjector
@@ -102,7 +103,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
 */
 
      fun openSignupActivity() {
-        val intent = SignupActivity.newIntent(this@LoginActivity)
+        val intent = HomeActivity.newIntent(this@LoginActivity)
         startActivity(intent)
 //        finish()
     }
