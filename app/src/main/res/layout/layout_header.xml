@@ -13,14 +13,13 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/activity_login_parent_cl7"
+        android:id="@+id/layout_header_parent_cl"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_38sdp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/purple2_700">
+        app:layout_constraintTop_toTopOf="parent">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/activity_login_logo_im"
+        android:id="@+id/layout_header_back_im"
         android:layout_width="@dimen/_38sdp"
         android:layout_height="@dimen/_38sdp"
         android:layout_marginStart="@dimen/_8sdp"
@@ -29,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/activity_login_parent_cl6"
+        android:id="@+id/layout_header_search_cl"
         android:layout_width="@dimen/_230sdp"
         android:layout_height="match_parent"
         android:background="@drawable/home_top"
@@ -40,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/activity_login_logo_im1"
+            android:id="@+id/layout_header_search_btn_im"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
             android:layout_marginEnd="@dimen/_8sdp"
@@ -48,6 +47,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/layout_header_search_ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:background="@null"
+            android:textColor="@color/text_color"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="@dimen/_11sdp"
+            android:hint="Search Here"
+            android:textColorHint="@color/text_color"
+            app:layout_constraintEnd_toEndOf="@+id/layout_header_search_cl"
+            app:layout_constraintStart_toStartOf="@+id/layout_header_search_cl"
+            app:layout_constraintTop_toTopOf="@+id/layout_header_search_cl"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_header_search_cl"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

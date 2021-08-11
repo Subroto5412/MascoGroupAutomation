@@ -11,6 +11,7 @@ import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivityLoginBinding
 import com.bd.mascogroup.automation.ui.base.BaseActivity
 import com.bd.mascogroup.automation.ui.home.HomeActivity
+import com.bd.mascogroup.automation.ui.production_management.ProductionManagementActivity
 import com.bd.mascogroup.automation.ui.signup.SignupActivity
 import com.bd.mascogroup.automation.utils.AppUtils
 import dagger.android.AndroidInjector
@@ -57,6 +58,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
         viewModel.navigator = this
         activity_login_signup_tv.setOnClickListener {
             openSignupActivity()
+        }
+
+        signInBtn.setOnClickListener {
+            val intent = ProductionManagementActivity.newIntent(this@LoginActivity)
+            startActivity(intent)
         }
 //        setup()
     }
