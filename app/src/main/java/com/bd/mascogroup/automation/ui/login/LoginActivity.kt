@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.databinding.library.baseAdapters.BR
 import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivityLoginBinding
@@ -57,56 +59,68 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
         mActivityLoginBinding = viewDataBinding
         viewModel.navigator = this
         activity_login_signup_tv.setOnClickListener {
-            openSignupActivity()
+            val intent = SignupActivity.newIntent(this@LoginActivity)
+            startActivity(intent)
         }
 
         signInBtn.setOnClickListener {
-            val intent = ProductionManagementActivity.newIntent(this@LoginActivity)
+           /* val intent = ProductionManagementActivity.newIntent(this@LoginActivity)
+            startActivity(intent)*/
+            openSignupActivity()
+        }
+        activity_login_forgot_password_tv.setOnClickListener {
+            val intent = SignupActivity.newIntent(this@LoginActivity)
             startActivity(intent)
         }
-//        setup()
+        setup()
     }
-/*
+
 
     fun setup() {
 
-        mActivityLoginBinding!!.activityLoginIdTiet.addTextChangedListener(object : TextWatcher {
+        activity_login_user_id_et.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                mActivityLoginBinding!!.activityLoginMainActv1.isEnabled =
-                        viewModel.isUserIdAndPasswordValid(
-                                mActivityLoginBinding!!.activityLoginIdTiet.text!!.toString(),
-                                mActivityLoginBinding!!.activityLoginPasswordTiet.text!!.toString()
-                        )
+               if (!s.toString().equals("")){
+                   activity_login_user_id_et.setBackgroundResource(R.drawable.input_field_white_bg)
+                   activity_login_logo_im.isGone = true
+                   activity_login_user_cl.isGone = false
+                   activity_login_user_name_tv.isGone = false
+                   activity_login_unit_name_tv.isGone = false
+               }else{
+                   activity_login_user_id_et.setBackgroundResource(R.drawable.input_filed_bg)
+                   activity_login_logo_im.isGone = false
+                   activity_login_user_cl.isGone = true
+                   activity_login_user_name_tv.isGone = true
+                   activity_login_unit_name_tv.isGone = true
+               }
             }
-
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
             }
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
             }
         })
-        mActivityLoginBinding!!.activityLoginPasswordTiet.addTextChangedListener(object :
+
+        activity_login_password_et.addTextChangedListener(object :
                 TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                mActivityLoginBinding!!.activityLoginMainActv1.isEnabled =
-                        viewModel.isUserIdAndPasswordValid(
-                                mActivityLoginBinding!!.activityLoginIdTiet.text!!.toString(),
-                                mActivityLoginBinding!!.activityLoginPasswordTiet.text!!.toString()
-                        )
+                if (!s.toString().equals("")){
+                    activity_login_password_et.setBackgroundResource(R.drawable.input_field_white_bg)
+                    activity_login_signin_btn.isGone = false
+                    activity_login_signin_btn_hide.isGone = true
+                }else{
+                    activity_login_password_et.setBackgroundResource(R.drawable.input_filed_bg)
+                    activity_login_signin_btn_hide.isGone = false
+                    activity_login_signin_btn.isGone = true
+                }
             }
-
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
             }
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
             }
         })
+
     }
-*/
+
 
      fun openSignupActivity() {
         val intent = HomeActivity.newIntent(this@LoginActivity)

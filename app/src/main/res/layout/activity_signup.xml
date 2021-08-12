@@ -127,7 +127,7 @@
                 android:gravity="center"
                 android:hint="Your employee ID"
                 android:inputType="phone"
-                android:textColor="@color/text_color_user_id"
+                android:textColor="@color/white"
                 android:textColorHint="@color/text_color_user_id"
                 android:textSize="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -135,7 +135,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/activity_signup_user_id_tv" />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/signInBtnmaterialCardView"
+                android:id="@+id/signInBtnmaterialCardViewHide"
                 android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_31sdp"
                 android:layout_marginStart="32dp"
@@ -149,6 +149,34 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/activity_signup_user_id_et">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/signInBtnHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Send OTP"
+                    android:textColor="@color/text_color_35"
+                    android:textSize="@dimen/_12sdp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/signInBtnmaterialCardView"
+                android:layout_width="@dimen/_125sdp"
+                android:layout_height="@dimen/_31sdp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/_23sdp"
+                android:layout_marginEnd="32dp"
+                android:outlineSpotShadowColor="#000066"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="24dp"
+                app:cardMaxElevation="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_signup_user_id_et"
+                android:visibility="gone">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/signInBtn"
@@ -166,26 +194,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_64sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_66sdp"
                 android:fontFamily="@font/montserrat_regular"
                 android:text="Already have an account?"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_11sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/signInBtnmaterialCardView" />
+                app:layout_constraintTop_toBottomOf="@+id/activity_signup_user_id_et" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/activity_signup_tv"
+                android:id="@+id/activity_signin_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_66sdp"
                 android:fontFamily="@font/montserrat_regular"
                 android:text="SIGN IN"
                 android:textColor="@color/text_color_user_id"
                 android:textSize="@dimen/_11sdp"
                 app:layout_constraintStart_toEndOf="@+id/activity_signup_account_tv"
-                app:layout_constraintTop_toBottomOf="@+id/signInBtnmaterialCardView" />
+                app:layout_constraintTop_toBottomOf="@+id/activity_signup_user_id_et" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
