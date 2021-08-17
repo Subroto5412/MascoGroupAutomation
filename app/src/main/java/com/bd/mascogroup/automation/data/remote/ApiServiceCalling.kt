@@ -1,7 +1,8 @@
 package com.bd.mascogroup.automation.data.remote
 
 
-import androidx.databinding.library.BuildConfig
+
+import com.bd.mascogroup.automation.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 
@@ -33,5 +34,13 @@ object ApiServiceCalling {
             .client(ApiWorker.client)
             .build()
             .create(ApiServiceProduct::class.java)!!*/
+
+    fun generalAPPSApiCall() = Retrofit.Builder()
+            .baseUrl(BuildConfig.API_BASE)
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addConverterFactory(ApiWorker.gsonConverter)
+            .client(ApiWorker.client)
+            .build()
+            .create(ApiService::class.java)!!
 
 }

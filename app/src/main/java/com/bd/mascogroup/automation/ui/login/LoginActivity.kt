@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.databinding.library.baseAdapters.BR
@@ -16,6 +20,7 @@ import com.bd.mascogroup.automation.ui.home.HomeActivity
 import com.bd.mascogroup.automation.ui.production_management.ProductionManagementActivity
 import com.bd.mascogroup.automation.ui.signup.SignupActivity
 import com.bd.mascogroup.automation.utils.AppUtils
+import com.google.android.material.card.MaterialCardView
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -48,9 +53,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
 
 
     override fun login() {
-
-
-
     }
 
 
@@ -72,55 +74,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(), ILog
             val intent = SignupActivity.newIntent(this@LoginActivity)
             startActivity(intent)
         }
-        setup()
+        viewModel.setup(this,activity_login_user_id_et,activity_login_password_et, activity_login_logo_im,activity_login_user_cl,
+                activity_login_user_name_tv, activity_login_unit_name_tv, activity_login_signin_btn,activity_login_signin_btn_hide)
     }
-
-
-    fun setup() {
-
-        activity_login_user_id_et.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-               if (!s.toString().equals("")){
-                   activity_login_user_id_et.setBackgroundResource(R.drawable.input_field_white_bg)
-                   activity_login_logo_im.isGone = true
-                   activity_login_user_cl.isGone = false
-                   activity_login_user_name_tv.isGone = false
-                   activity_login_unit_name_tv.isGone = false
-               }else{
-                   activity_login_user_id_et.setBackgroundResource(R.drawable.input_filed_bg)
-                   activity_login_logo_im.isGone = false
-                   activity_login_user_cl.isGone = true
-                   activity_login_user_name_tv.isGone = true
-                   activity_login_unit_name_tv.isGone = true
-               }
-            }
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-        })
-
-        activity_login_password_et.addTextChangedListener(object :
-                TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if (!s.toString().equals("")){
-                    activity_login_password_et.setBackgroundResource(R.drawable.input_field_white_bg)
-                    activity_login_signin_btn.isGone = false
-                    activity_login_signin_btn_hide.isGone = true
-                }else{
-                    activity_login_password_et.setBackgroundResource(R.drawable.input_filed_bg)
-                    activity_login_signin_btn_hide.isGone = false
-                    activity_login_signin_btn.isGone = true
-                }
-            }
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-        })
-
-    }
-
 
      fun openSignupActivity() {
         val intent = HomeActivity.newIntent(this@LoginActivity)

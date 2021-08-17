@@ -70,10 +70,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_human_resource_top_im"
-                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_55sdp"
                                     android:layout_height="@dimen/_28sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/human_resource_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -128,10 +128,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_supply_chain_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_72sdp"
+                                    android:layout_height="@dimen/_34sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/supply_chain_icon"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -197,10 +197,10 @@
 
                                  <androidx.appcompat.widget.AppCompatImageView
                                      android:id="@+id/layout_production_management_top_im"
-                                     android:layout_width="@dimen/_28sdp"
-                                     android:layout_height="@dimen/_28sdp"
+                                     android:layout_width="@dimen/_62sdp"
+                                     android:layout_height="@dimen/_34sdp"
                                      android:layout_marginEnd="@dimen/_8sdp"
-                                     android:src="@drawable/home_item_icon"
+                                     android:src="@drawable/production_management_icon"
                                      app:layout_constraintEnd_toEndOf="parent"
                                      app:layout_constraintTop_toTopOf="parent"
                                      app:layout_constraintBottom_toBottomOf="parent"
@@ -255,10 +255,10 @@
 
                                  <androidx.appcompat.widget.AppCompatImageView
                                      android:id="@+id/layout_merchandising_marketing_top_im"
-                                     android:layout_width="@dimen/_28sdp"
-                                     android:layout_height="@dimen/_28sdp"
+                                     android:layout_width="@dimen/_72sdp"
+                                     android:layout_height="@dimen/_35sdp"
                                      android:layout_marginEnd="@dimen/_8sdp"
-                                     android:src="@drawable/home_item_icon"
+                                     android:src="@drawable/merchandising_marketing"
                                      app:layout_constraintEnd_toEndOf="parent"
                                      app:layout_constraintTop_toTopOf="parent"
                                      app:layout_constraintBottom_toBottomOf="parent"
@@ -324,10 +324,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_asset_tracking_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_63sdp"
+                                    android:layout_height="@dimen/_33sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/asset_tracking_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -382,10 +382,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_automobile_management_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_66sdp"
+                                    android:layout_height="@dimen/_34sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/automobile_management_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -451,10 +451,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_search_engine_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_64sdp"
+                                    android:layout_height="@dimen/_30sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/search_engine_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -509,10 +509,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_dispatch_slip_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_57sdp"
+                                    android:layout_height="@dimen/_34sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/dispatch_slip_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -578,10 +578,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_idea_laboratory_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_63sdp"
+                                    android:layout_height="@dimen/_33sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/idea_laboratory_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -636,10 +636,10 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_documentation_management_top_im"
-                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_52sdp"
                                     android:layout_height="@dimen/_28sdp"
                                     android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/documentation_management_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
