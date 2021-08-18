@@ -70,10 +70,9 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_human_resource_top_im"
-                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_width="@dimen/_46sdp"
                                     android:layout_height="@dimen/_28sdp"
-                                    android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:src="@drawable/knitting_roduction_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -128,10 +127,9 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_supply_chain_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
-                                    android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:layout_width="@dimen/_42sdp"
+                                    android:layout_height="@dimen/_33sdp"
+                                    android:src="@drawable/dyeing_production_icon"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -197,10 +195,9 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_production_management_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
-                                    android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:layout_width="@dimen/_65sdp"
+                                    android:layout_height="@dimen/_31sdp"
+                                    android:src="@drawable/garments_production_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -255,10 +252,9 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_merchandising_marketing_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
-                                    android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:layout_width="@dimen/_56sdp"
+                                    android:layout_height="@dimen/_31sdp"
+                                    android:src="@drawable/garments_printing_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -324,10 +320,9 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/layout_asset_tracking_top_im"
-                                    android:layout_width="@dimen/_28sdp"
-                                    android:layout_height="@dimen/_28sdp"
-                                    android:layout_marginEnd="@dimen/_8sdp"
-                                    android:src="@drawable/home_item_icon"
+                                    android:layout_width="@dimen/_57sdp"
+                                    android:layout_height="@dimen/_31sdp"
+                                    android:src="@drawable/garments_embroidery_icon"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"

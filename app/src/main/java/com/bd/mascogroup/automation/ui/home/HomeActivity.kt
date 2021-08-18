@@ -7,6 +7,9 @@ import androidx.databinding.library.baseAdapters.BR
 import com.bd.mascogroup.automation.R
 import com.bd.mascogroup.automation.databinding.ActivityHomeBinding
 import com.bd.mascogroup.automation.ui.base.BaseActivity
+import com.bd.mascogroup.automation.ui.production_management.ProductionManagementActivity
+import com.bd.mascogroup.automation.ui.signup.SignupActivity
+import kotlinx.android.synthetic.main.layout_home_body.*
 import javax.inject.Inject
 
 class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewModel>(), IHomeNavigator {
@@ -35,6 +38,11 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewModel>(), IHomeNa
         super.onCreate(savedInstanceState)
         mActivityHomeBinding = viewDataBinding
         viewModel.navigator = this
+
+        layout_production_management_cl.setOnClickListener {
+            val intent = ProductionManagementActivity.newIntent(this@HomeActivity)
+            startActivity(intent)
+        }
     }
 
     companion object {
