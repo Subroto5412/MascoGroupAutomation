@@ -230,17 +230,7 @@
                                      app:layout_constraintEnd_toEndOf="parent"
                                      app:layout_constraintStart_toStartOf="parent"
                                      app:layout_constraintTop_toBottomOf="@+id/activity_login_full_user_info_cl" />
-
-
-                                 <androidx.appcompat.widget.AppCompatImageView
-                                     android:id="@+id/layout_production_management_direction_im"
-                                     android:layout_width="@dimen/_8sdp"
-                                     android:layout_height="@dimen/_15sdp"
-                                     android:layout_marginBottom="@dimen/_11sdp"
-                                     android:layout_marginEnd="@dimen/_7sdp"
-                                     android:src="@drawable/arrow_dropright"
-                                     app:layout_constraintEnd_toEndOf="parent"
-                                     app:layout_constraintBottom_toBottomOf="parent" />
+                                 
 
                              </androidx.constraintlayout.widget.ConstraintLayout>
                          </androidx.constraintlayout.widget.ConstraintLayout>
