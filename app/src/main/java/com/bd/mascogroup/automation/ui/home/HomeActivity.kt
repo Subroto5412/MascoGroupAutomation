@@ -23,7 +23,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewModel>(), IHomeNa
     @Inject
     lateinit var mHomeViewModel: HomeViewModel
 
-
+//Hello Subroto
 
     override val bindingVariable: Int
         get() = BR.viewModel
